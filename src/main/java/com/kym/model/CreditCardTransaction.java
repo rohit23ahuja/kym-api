@@ -1,6 +1,5 @@
 package com.kym.model;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -8,9 +7,7 @@ import jakarta.persistence.Table;
 import org.hibernate.annotations.Immutable;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 @Entity
 @Immutable
@@ -26,7 +23,6 @@ public class CreditCardTransaction {
 
     private String customerName;
 
-    @JsonFormat(pattern = "dd-MM-yyyy HH:mm")
     @Column(name = "txn_datetime")
     private LocalDateTime txnDateTime;
 
